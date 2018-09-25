@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C12C8DB215A2C6F00153FF2 /* CAShapeLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C12C8DA215A2C6F00153FF2 /* CAShapeLayerViewController.swift */; };
 		0C1EE3E42159947A002F5361 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1EE3E32159947A002F5361 /* AppDelegate.swift */; };
 		0C1EE3E92159947A002F5361 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C1EE3E72159947A002F5361 /* Main.storyboard */; };
 		0C1EE3EB2159947B002F5361 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C1EE3EA2159947B002F5361 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C12C8DA215A2C6F00153FF2 /* CAShapeLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAShapeLayerViewController.swift; sourceTree = "<group>"; };
 		0C1EE3E02159947A002F5361 /* iOS_Graphics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Graphics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C1EE3E32159947A002F5361 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C1EE3E82159947A002F5361 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				0C1EE3E32159947A002F5361 /* AppDelegate.swift */,
 				0C1EE3F521599708002F5361 /* MainMenuViewController.swift */,
+				0C12C8DA215A2C6F00153FF2 /* CAShapeLayerViewController.swift */,
 				0C1EE3E72159947A002F5361 /* Main.storyboard */,
 				0C1EE3EA2159947B002F5361 /* Assets.xcassets */,
 				0C1EE3EC2159947B002F5361 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				0C1EE3F621599708002F5361 /* MainMenuViewController.swift in Sources */,
 				0C1EE3E42159947A002F5361 /* AppDelegate.swift in Sources */,
+				0C12C8DB215A2C6F00153FF2 /* CAShapeLayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

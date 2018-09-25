@@ -8,25 +8,47 @@
 
 import UIKit
 
-class MainMenuViewController: UIViewController {
+class MainMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var table: UITableView!
     
+    enum TableItems: String {
+        case CAShapeLayer      // Segues has the same id
+        
+        static var count: Int {
+            return 1
+        }
+        
+        static func item(at index: Int) -> String {
+            switch index {
+            case 0:     return TableItems.CAShapeLayer.rawValue
+            default:    return ""
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        table.rowHeight = 60.0
 
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: - UITableViewDataSource & UITableViewDelegate
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return TableItems.count
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell.init(style: .default, reuseIdentifier: nil) //tableView.dequeueReusableCell
+        cell.textLabel?.text = TableItems.item(at: indexPath.row)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: TableItems.item(at: indexPath.row), sender: nil)
+    }
+    
+    
 
 }
