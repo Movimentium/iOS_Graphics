@@ -55,7 +55,51 @@
                     <view key="view" contentMode="scaleToFill" id="wo2-4w-c1g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dPW-YT-S47">
+                                <rect key="frame" x="20" y="200" width="335" height="29"/>
+                                <segments>
+                                    <segment title="Circle"/>
+                                    <segment title="Square"/>
+                                    <segment title="Rect"/>
+                                    <segment title="Triangle"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onSegPathValueChanged:" destination="6rV-cU-2yP" eventType="valueChanged" id="WnT-fC-aka"/>
+                                </connections>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.20000000000000001" minValue="0.20000000000000001" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Gfl-sv-aFh">
+                                <rect key="frame" x="18" y="273" width="339" height="31"/>
+                                <connections>
+                                    <action selector="onSliderAnimTimeValueChanged:" destination="6rV-cU-2yP" eventType="valueChanged" id="KYi-AA-6e7"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.20 s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Djr-jo-me0">
+                                <rect key="frame" x="20" y="315" width="48" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anim time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poJ-BR-ZGG">
+                                <rect key="frame" x="20" y="244" width="77" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dPW-YT-S47" firstAttribute="leading" secondItem="IwC-Es-gOu" secondAttribute="leading" constant="20" id="AYq-hu-1GH"/>
+                            <constraint firstItem="IwC-Es-gOu" firstAttribute="trailing" secondItem="Gfl-sv-aFh" secondAttribute="trailing" constant="20" id="Gdk-e3-36n"/>
+                            <constraint firstItem="dPW-YT-S47" firstAttribute="top" secondItem="IwC-Es-gOu" secondAttribute="top" constant="200" id="Gdx-cP-QEf"/>
+                            <constraint firstItem="IwC-Es-gOu" firstAttribute="trailing" secondItem="dPW-YT-S47" secondAttribute="trailing" constant="20" id="Vt2-GI-yEb"/>
+                            <constraint firstItem="Djr-jo-me0" firstAttribute="top" secondItem="Gfl-sv-aFh" secondAttribute="bottom" constant="12" id="emK-yp-UtP"/>
+                            <constraint firstItem="poJ-BR-ZGG" firstAttribute="leading" secondItem="IwC-Es-gOu" secondAttribute="leading" constant="20" id="oEj-4H-xOg"/>
+                            <constraint firstItem="Djr-jo-me0" firstAttribute="leading" secondItem="IwC-Es-gOu" secondAttribute="leading" constant="20" id="rys-lF-Jq7"/>
+                            <constraint firstItem="Gfl-sv-aFh" firstAttribute="top" secondItem="poJ-BR-ZGG" secondAttribute="bottom" constant="8" id="sfk-af-BLF"/>
+                            <constraint firstItem="poJ-BR-ZGG" firstAttribute="top" secondItem="dPW-YT-S47" secondAttribute="bottom" constant="16" id="wGX-XY-4k0"/>
+                            <constraint firstItem="Gfl-sv-aFh" firstAttribute="leading" secondItem="IwC-Es-gOu" secondAttribute="leading" constant="20" id="xHO-nb-6oW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="IwC-Es-gOu"/>
                     </view>
                     <navigationItem key="navigationItem" title="CAShapeLayer" id="m3s-C3-weF">
@@ -65,6 +109,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="lblAnimTime" destination="Djr-jo-me0" id="wKh-9F-LXi"/>
+                        <outlet property="segPath" destination="dPW-YT-S47" id="D0g-ou-Hoz"/>
+                        <outlet property="sliderAnimTime" destination="Gfl-sv-aFh" id="fJY-oT-YYj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gvT-ww-ngW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
